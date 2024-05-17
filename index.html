@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Teisaku</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>割り勘アプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>割り勘アプリ</h1>
+        <div class="form">
+            <input type="text" id="memberName" placeholder="メンバーの名前">
+            <button onclick="addMember()">メンバーを追加</button>
+        </div>
+        <div class="form">
+            <input type="text" id="expenseTitle" placeholder="費用のタイトル（任意）">
+            <input type="number" id="expenseAmount" placeholder="金額">
+            <select id="payerName">
+                <option value="" disabled selected>支払者を選択</option>
+            </select>
+            <div id="expenseMembers"></div>
+            <button onclick="addExpense()">費用を追加</button>
+        </div>
+        <div class="expense-list">
+            <h2>費用一覧</h2>
+            <ul id="expenses"></ul>
+            <button id="showMoreButton" onclick="toggleDetails()" style="display: none;">詳細を表示</button>
+        </div>
+        <div class="calculation">
+            <h2>割り勘結果</h2>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>メンバー</th>
+                        <th>支払い総額</th>
+                        <th>受取額</th>
+                        <th>支払額</th>
+                    </tr>
+                </thead>
+                <tbody id="results"></tbody>
+            </table>
+            <div id="detailedResults"></div>
+        </div>
+        <div class="backup">
+            <input type="text" id="backupName" placeholder="バックアップの名前">
+            <button onclick="createBackup()">バックアップを作成</button>
+        </div>
+        <div id="backupList"></div>
+        <button onclick="resetData()">データをリセット</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
